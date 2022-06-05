@@ -18,6 +18,8 @@ public class Main {
 		System.out.println("");
 		System.out.println("altura: " + arvore.tamanho());
 		System.out.println(arvore);
+		
+		arvore.preOrder();
 
 	}
 

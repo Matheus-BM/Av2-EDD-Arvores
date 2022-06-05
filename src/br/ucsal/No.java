@@ -1,7 +1,7 @@
 package br.ucsal;
 
 public class No {
-	
+
 	public No origin;
 	public No left;
 	public No right;
@@ -12,7 +12,6 @@ public class No {
 		left = null;
 		right = null;
 		this.data = data;
-		
 	}
 	
 	public boolean isFolha() {
@@ -21,6 +20,9 @@ public class No {
 		
 	}
 	
-	
+	@Override
+	public String toString() {
+		return "No [data=" + data + "]";
+	}
 
 }

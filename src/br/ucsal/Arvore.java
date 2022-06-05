@@ -5,12 +5,69 @@ package br.ucsal;
 public class Arvore {
 
 	public No root;
+	
+	public No current; 
+	
 	private int tamanho =0;
 	
 	private static int COUNT = 10;
 	
 	public Arvore() {
+
 		root = null; 
+	}
+	
+	public void preOrder() {
+		No local = current;
+		System.out.println(local);
+		if (local.left != null) {
+			current = local.left;
+			preOrder();
+		}
+		if (local.right != null) {
+			current = local.right;
+			preOrder();
+		}
+		if (local.equals(root)) {
+			current = root;
+		}
+	}
+	
+	public void inOrder() {
+		No local = current;
+		
+		if (local.left != null) {
+			current = local.left;
+			inOrder();
+		}
+		System.out.println(local);
+		if (local.right != null) {
+			current = local.right;
+			inOrder();
+		}
+		if (local.equals(root)) {
+			current = root;
+		}
+	}
+	
+	public void afterOrder() {
+		No local = current;
+		
+		if (local.left != null) {
+			current = local.left;
+			inOrder();
+		}
+		
+		if (local.right != null) {
+			current = local.right;
+			inOrder();
+		}
+		
+		System.out.println(local);
+		
+		if (local.equals(root)) {
+			current = root;
+		}
 	}
 	
 	public boolean insert(int data) {
