@@ -78,6 +78,7 @@ public class Arvore {
 		
 		if(root == null) {
 			root = newNo;
+			current = root;
 			tamanho++;
 			return true;
 		}
